@@ -3,7 +3,7 @@
 Based on the graphql grammar provided by https://github.com/antlr/grammars-v4/blob/master/graphql/GraphQL.g4 
 
  */
-grammar GraphQL;
+grammar EGraphQL;
 
 //https://spec.graphql.org/June2018/#sec-Language.Document
 document: definition+;
