@@ -1,5 +1,5 @@
 generate:
-	antlr4 -Dlanguage=Go EGraphQL.g4
+	./scripts/codegen.sh
 
 setup:
 	./scripts/setup.sh
