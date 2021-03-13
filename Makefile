@@ -1,4 +1,4 @@
 
 
 setup:
-	go get -v -t -d ./...
+	./scripts/setup.sh
