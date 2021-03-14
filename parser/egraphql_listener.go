@@ -137,6 +137,9 @@ type EGraphQLListener interface {
 	// EnterTypeDefinition is called when entering the typeDefinition production.
 	EnterTypeDefinition(c *TypeDefinitionContext)
 
+	// EnterTempletableTypeDefinition is called when entering the templetableTypeDefinition production.
+	EnterTempletableTypeDefinition(c *TempletableTypeDefinitionContext)
+
 	// EnterTypeExtension is called when entering the typeExtension production.
 	EnterTypeExtension(c *TypeExtensionContext)
 
@@ -220,6 +223,9 @@ type EGraphQLListener interface {
 
 	// EnterName is called when entering the name production.
 	EnterName(c *NameContext)
+
+	// EnterTemplateTypeDefinition is called when entering the templateTypeDefinition production.
+	EnterTemplateTypeDefinition(c *TemplateTypeDefinitionContext)
 
 	// ExitDocument is called when exiting the document production.
 	ExitDocument(c *DocumentContext)
@@ -350,6 +356,9 @@ type EGraphQLListener interface {
 	// ExitTypeDefinition is called when exiting the typeDefinition production.
 	ExitTypeDefinition(c *TypeDefinitionContext)
 
+	// ExitTempletableTypeDefinition is called when exiting the templetableTypeDefinition production.
+	ExitTempletableTypeDefinition(c *TempletableTypeDefinitionContext)
+
 	// ExitTypeExtension is called when exiting the typeExtension production.
 	ExitTypeExtension(c *TypeExtensionContext)
 
@@ -433,4 +442,7 @@ type EGraphQLListener interface {
 
 	// ExitName is called when exiting the name production.
 	ExitName(c *NameContext)
+
+	// ExitTemplateTypeDefinition is called when exiting the templateTypeDefinition production.
+	ExitTemplateTypeDefinition(c *TemplateTypeDefinitionContext)
 }

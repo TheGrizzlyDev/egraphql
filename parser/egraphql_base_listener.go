@@ -281,6 +281,13 @@ func (s *BaseEGraphQLListener) EnterTypeDefinition(ctx *TypeDefinitionContext) {
 // ExitTypeDefinition is called when production typeDefinition is exited.
 func (s *BaseEGraphQLListener) ExitTypeDefinition(ctx *TypeDefinitionContext) {}
 
+// EnterTempletableTypeDefinition is called when production templetableTypeDefinition is entered.
+func (s *BaseEGraphQLListener) EnterTempletableTypeDefinition(ctx *TempletableTypeDefinitionContext) {
+}
+
+// ExitTempletableTypeDefinition is called when production templetableTypeDefinition is exited.
+func (s *BaseEGraphQLListener) ExitTempletableTypeDefinition(ctx *TempletableTypeDefinitionContext) {}
+
 // EnterTypeExtension is called when production typeExtension is entered.
 func (s *BaseEGraphQLListener) EnterTypeExtension(ctx *TypeExtensionContext) {}
 
@@ -453,3 +460,9 @@ func (s *BaseEGraphQLListener) EnterName(ctx *NameContext) {}
 
 // ExitName is called when production name is exited.
 func (s *BaseEGraphQLListener) ExitName(ctx *NameContext) {}
+
+// EnterTemplateTypeDefinition is called when production templateTypeDefinition is entered.
+func (s *BaseEGraphQLListener) EnterTemplateTypeDefinition(ctx *TemplateTypeDefinitionContext) {}
+
+// ExitTemplateTypeDefinition is called when production templateTypeDefinition is exited.
+func (s *BaseEGraphQLListener) ExitTemplateTypeDefinition(ctx *TemplateTypeDefinitionContext) {}

@@ -15,7 +15,7 @@ func NewTreeShapeListener() *TreeShapeListener {
 	return new(TreeShapeListener)
 }
 
-func (this *TreeShapeListener) EnterEveryRule(ctx antlr.ParserRuleContext) {
+func (this *TreeShapeListener) EnterTemplateTypeDefinition(ctx *parser.TemplateTypeDefinitionContext) {
 	fmt.Println(ctx.GetText())
 }
 

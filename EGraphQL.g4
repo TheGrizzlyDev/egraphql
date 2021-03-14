@@ -149,11 +149,17 @@ description: stringValue;
 //https://spec.graphql.org/June2018/#sec-Types
 typeDefinition:
 	scalarTypeDefinition
-	| objectTypeDefinition
-	| interfaceTypeDefinition
 	| unionTypeDefinition
 	| enumTypeDefinition
-	| inputObjectTypeDefinition;
+    | templetableTypeDefinition
+    | templateTypeDefinition
+    ;
+
+templetableTypeDefinition:
+    objectTypeDefinition
+    | interfaceTypeDefinition
+    | inputObjectTypeDefinition
+    ;
 
 //https://spec.graphql.org/June2018/#sec-Type-Extensions
 typeExtension : scalarTypeExtension
@@ -259,6 +265,9 @@ typeSystemDirectiveLocation:
     ;
 
 name: NAME;
+
+templateTypeDefinition:
+    'template' '<' name (',' name)* '>' templetableTypeDefinition;
 
 //Start lexer
 NAME: [_A-Za-z] [_0-9A-Za-z]*;
