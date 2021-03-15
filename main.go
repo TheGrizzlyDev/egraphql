@@ -19,6 +19,10 @@ func (this *TreeShapeListener) EnterTemplateTypeDefinition(ctx *parser.TemplateT
 	fmt.Println(ctx.GetText())
 }
 
+func (this *TreeShapeListener) EnterTemplateImplementedTypeDefinition(ctx *parser.TemplateImplementedTypeDefinitionContext) {
+	fmt.Println(ctx.GetText())
+}
+
 func main() {
 	input, _ := antlr.NewFileStream(os.Args[1])
 	lexer := parser.NewEGraphQLLexer(input)
@@ -28,4 +32,5 @@ func main() {
 	p.BuildParseTrees = true
 	tree := p.TypeDefinition()
 	antlr.ParseTreeWalkerDefault.Walk(NewTreeShapeListener(), tree)
+	fmt.Println(tree.GetText())
 }

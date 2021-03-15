@@ -461,8 +461,24 @@ func (s *BaseEGraphQLListener) EnterName(ctx *NameContext) {}
 // ExitName is called when production name is exited.
 func (s *BaseEGraphQLListener) ExitName(ctx *NameContext) {}
 
+// EnterTemplateParametersDefinition is called when production templateParametersDefinition is entered.
+func (s *BaseEGraphQLListener) EnterTemplateParametersDefinition(ctx *TemplateParametersDefinitionContext) {
+}
+
+// ExitTemplateParametersDefinition is called when production templateParametersDefinition is exited.
+func (s *BaseEGraphQLListener) ExitTemplateParametersDefinition(ctx *TemplateParametersDefinitionContext) {
+}
+
 // EnterTemplateTypeDefinition is called when production templateTypeDefinition is entered.
 func (s *BaseEGraphQLListener) EnterTemplateTypeDefinition(ctx *TemplateTypeDefinitionContext) {}
 
 // ExitTemplateTypeDefinition is called when production templateTypeDefinition is exited.
 func (s *BaseEGraphQLListener) ExitTemplateTypeDefinition(ctx *TemplateTypeDefinitionContext) {}
+
+// EnterTemplateImplementedTypeDefinition is called when production templateImplementedTypeDefinition is entered.
+func (s *BaseEGraphQLListener) EnterTemplateImplementedTypeDefinition(ctx *TemplateImplementedTypeDefinitionContext) {
+}
+
+// ExitTemplateImplementedTypeDefinition is called when production templateImplementedTypeDefinition is exited.
+func (s *BaseEGraphQLListener) ExitTemplateImplementedTypeDefinition(ctx *TemplateImplementedTypeDefinitionContext) {
+}

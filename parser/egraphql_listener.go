@@ -224,8 +224,14 @@ type EGraphQLListener interface {
 	// EnterName is called when entering the name production.
 	EnterName(c *NameContext)
 
+	// EnterTemplateParametersDefinition is called when entering the templateParametersDefinition production.
+	EnterTemplateParametersDefinition(c *TemplateParametersDefinitionContext)
+
 	// EnterTemplateTypeDefinition is called when entering the templateTypeDefinition production.
 	EnterTemplateTypeDefinition(c *TemplateTypeDefinitionContext)
+
+	// EnterTemplateImplementedTypeDefinition is called when entering the templateImplementedTypeDefinition production.
+	EnterTemplateImplementedTypeDefinition(c *TemplateImplementedTypeDefinitionContext)
 
 	// ExitDocument is called when exiting the document production.
 	ExitDocument(c *DocumentContext)
@@ -443,6 +449,12 @@ type EGraphQLListener interface {
 	// ExitName is called when exiting the name production.
 	ExitName(c *NameContext)
 
+	// ExitTemplateParametersDefinition is called when exiting the templateParametersDefinition production.
+	ExitTemplateParametersDefinition(c *TemplateParametersDefinitionContext)
+
 	// ExitTemplateTypeDefinition is called when exiting the templateTypeDefinition production.
 	ExitTemplateTypeDefinition(c *TemplateTypeDefinitionContext)
+
+	// ExitTemplateImplementedTypeDefinition is called when exiting the templateImplementedTypeDefinition production.
+	ExitTemplateImplementedTypeDefinition(c *TemplateImplementedTypeDefinitionContext)
 }

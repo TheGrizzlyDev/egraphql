@@ -1,3 +1,5 @@
 template <T> type Container {
     value: T!
 }
+
+apply Container<Int> to type IntContainer {}

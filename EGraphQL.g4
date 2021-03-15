@@ -153,6 +153,7 @@ typeDefinition:
 	| enumTypeDefinition
     | templetableTypeDefinition
     | templateTypeDefinition
+    | templateImplementedTypeDefinition
     ;
 
 templetableTypeDefinition:
@@ -266,8 +267,14 @@ typeSystemDirectiveLocation:
 
 name: NAME;
 
+templateParametersDefinition:
+    '<' name (',' name)* '>';
+
 templateTypeDefinition:
-    'template' '<' name (',' name)* '>' templetableTypeDefinition;
+    'template' templateParametersDefinition? templetableTypeDefinition;
+
+templateImplementedTypeDefinition:
+    'apply' name templateParametersDefinition? (',' name templateParametersDefinition?)* 'to' templetableTypeDefinition;
 
 //Start lexer
 NAME: [_A-Za-z] [_0-9A-Za-z]*;
