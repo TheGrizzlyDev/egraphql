@@ -1,0 +1,18 @@
+interface I {
+    id: ID!
+}
+
+type T implements I {
+    id: ID!
+}
+
+type D {
+    id: Int!
+}
+
+union U = T | D
+
+extends type D {
+    name: String
+}
+

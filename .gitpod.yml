@@ -3,3 +3,7 @@ image:
 
 tasks:
   - init: make setup
+
+vscode:
+  extensions:
+    - graphql.vscode-graphql@0.3.8:jHk/gSNypa0bHc+cU2gp8w==

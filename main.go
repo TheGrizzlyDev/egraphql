@@ -16,11 +16,11 @@ func NewTreeShapeListener() *TreeShapeListener {
 }
 
 func (this *TreeShapeListener) EnterTemplateTypeDefinition(ctx *parser.TemplateTypeDefinitionContext) {
-	fmt.Println(ctx.GetText())
+	fmt.Println(ctx.TempletableTypeDefinition())
 }
 
 func (this *TreeShapeListener) EnterTemplateImplementedTypeDefinition(ctx *parser.TemplateImplementedTypeDefinitionContext) {
-	fmt.Println(ctx.GetText())
+	fmt.Println(ctx.FieldsDefinition())
 }
 
 func main() {
