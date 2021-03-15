@@ -30,7 +30,6 @@ func main() {
 	p := parser.NewEGraphQLParser(stream)
 	p.AddErrorListener(antlr.NewDiagnosticErrorListener(true))
 	p.BuildParseTrees = true
-	tree := p.TypeDefinition()
+	tree := p.Document()
 	antlr.ParseTreeWalkerDefault.Walk(NewTreeShapeListener(), tree)
-	fmt.Println(tree.GetText())
 }

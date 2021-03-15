@@ -274,7 +274,7 @@ templateTypeDefinition:
     'template' templateParametersDefinition? templetableTypeDefinition;
 
 templateImplementedTypeDefinition:
-    'apply' name templateParametersDefinition? (',' name templateParametersDefinition?)* 'to' templetableTypeDefinition;
+    'apply' name templateParametersDefinition? (',' name templateParametersDefinition?)* 'to' name (fieldsDefinition | ('{' '}'))?;
 
 //Start lexer
 NAME: [_A-Za-z] [_0-9A-Za-z]*;
